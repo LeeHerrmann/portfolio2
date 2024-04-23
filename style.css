@@ -20,9 +20,11 @@ body {
 #aboutme{
     padding: 50px;
     color:#000000;
-    background-color: #ff8800;
+    background-color: rgb(255, 136, 0);
     position: relative;
     z-index: 3;
+    border-radius: 50px;
+    box-shadow: 0 20px 50px 20px rgba(255, 136, 0, 0.5); /* Параметры: смещение по X, смещение по Y, размытие, размер свечения и цвет */
 }
 #aboutme2 {
    
@@ -35,6 +37,10 @@ body {
 }
 #aboutme5 {
    
+}
+
+p {
+    font-size: large;
 }
 nav{
     border: 1px solid #ff8800;
@@ -91,6 +97,7 @@ h1 {
   h2 {
     animation-duration: 2s;
     animation-name: slidein;
+    size: 30px;
   }
   
   @keyframes slidein {
@@ -105,6 +112,23 @@ h1 {
     }
   }
   
+  p {
+    animation-duration: 2s;
+    animation-name: slidein;
+    size: 30px;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: -100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 .content {
     text-align: top;
     padding: 20px;
@@ -124,7 +148,7 @@ h1 {
 .content2 {
     position: absolute;
     top: 0;
-    left: 972px; /* сдвигаем текст вправо */
+    left: 980px; /* сдвигаем текст вправо */
     width: calc(50% - 100px); /* Текст будет занимать правую половину контейнера за вычетом сдвига */
     height: 100%;
     display: flex;
@@ -183,6 +207,7 @@ h1 {
     text-decoration: none;
     color: white;
     transition: background-color 0.3s;
+    margin: 0 50px;
 }
 
 .button:hover {
@@ -191,7 +216,7 @@ h1 {
 
 .button img {
     width: 400px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 
@@ -220,20 +245,15 @@ h2 {
 }
 
 .card{
-    margin-top: 150px;
+    margin-top: 170px;
     width: 750px;
     background-color: rgb(196, 196, 196);
     padding: 50px ;
     border-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
-.card2{
-    margin-right: 50px;
-    margin-top: 110px;
-    width: 240px;
-    background-color: rgb(196, 196, 196);
-    padding: 50px ;
-    border-radius: 30px;
-}
+
 #slide1, #slide5 {
     background: linear-gradient(to bottom left, #555555, #202020);
 }
@@ -269,45 +289,33 @@ h2 {
 
 .second-slide-image {
         background-image: url('Zurich.jpg');
+        border-radius: 100%;
         /* Задаем размер и позицию фоновой картинки */
         background-size: cover;
         background-position: left;
         /* Задаем размеры и позиционирование элемента */
         position: absolute;
-        top: 0;
+        top: 20px;
         left: 20px;
-        width: 50%;
-        height: 96%;
+        width: 45%;
+        height: 90%;
+        
         /* Указываем z-index, чтобы картинка была под контентом */
         z-index: 1;
+        box-shadow: 0 20px 50px 20px rgba(255, 255, 255, 0.5); /* Параметры: смещение по X, смещение по Y, размытие, размер свечения и цвет */
 }
 
 .third-slide-image {
-    background-image: url('третий_слайд-removebg.png');
+    background-image: url('upscaled_image.png');
     /* Задаем размер и позицию фоновой картинки */
     background-size: cover;
     background-position: center;
     /* Задаем размеры и позиционирование элемента */
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    left: 120px;
+    width: 90%;
+    height: 90%;
     /* Указываем z-index, чтобы картинка была под контентом */
     z-index: 1;
-}
-
-.fifth-bottom-slide-image {
-    background-image: url('дно-removebg-preview.png');
-    /* Задаем размер и позицию фоновой картинки */
-    background-size: cover;
-    background-position: bottom;
-    /* Задаем размеры и позиционирование элемента */
-    position: absolute;
-    top: 500px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Указываем z-index, чтобы картинка была под контентом */
-    z-index: 5;
 }
